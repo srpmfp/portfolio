@@ -1,0 +1,109 @@
+$primary: #8a2326
+$secondary: #2d335a
+$tertiary: #5e4266a6
+$danger: #b7442c
+
+.nav
+    color: #fff
+
+.headerImage
+
+    left: 5vw
+    width: fit-content
+    height: 150px
+    max-width: 150px
+    margin: 0 auto
+    object-fit: cover
+    border-radius: 50%
+
+.navDir
+    position: fixed
+    left: 1%
+    background-color: rgba(233, 206, 206, 0.726)
+    border-radius: 1em
+    bottom: 50%
+    font-size: x-small
+    width: 10px
+    z-index: 1000
+
+.bgPattern
+    width: 100%
+    height: 100%
+    position: absolute
+    background-image: url("/./public/grain.png")
+    background-size: 40%
+
+.navHeader
+
+    display: flex
+    flex-direction: row
+    background-image: url("/./public/grain.png")
+    background-size: 30%
+    height: 10%
+    min-height: fit-content
+    background-image: linear-gradient($primary,$primary, $primary, darken($primary, 10%))
+    position: fixed
+    z-index: 1050
+    width: 100%
+    font-size: 1.5em
+    border-bottom: 3px solid $primary
+    box-shadow: 0 0 10px rgba(99, 99, 99, 0.753)
+
+@media all and (max-width: 1000px)
+
+    .headerImage
+        display: none
+        height: max-content
+        position: absolute
+        left: 0
+        z-index: -1
+
+    .navbar-brand
+        align-self: center
+
+.nav-underline
+    position: relative
+    text-shadow: 0 0 100px rgba(0, 0, 0, 0.979)
+    font-size: 1.2em
+
+    &::after
+        content: ''
+        position: absolute
+        border-radius: 1em
+        left: 0
+        bottom: 0
+        width: 90%
+        height: 2px
+        background: #ffffff2a
+        transform: scaleX(0)
+        transform-origin: center
+        transition: transform 0.5s cubic-bezier(1,.5,0.5,.5)
+        pointer-events: none
+    &:hover::after, &:focus::after
+        transform: scaleX(1)
+
+.nav-highlight
+    position: relative
+    &::after
+        content: ''
+        position: absolute
+        border-radius: 1em
+        left: 0
+        top: 0
+        width: 100%
+        height: 2em
+        color: $primary
+        background: #ffffff2a
+        transform: scaleX(0)
+        transform-origin: center
+        transition: transform 0.5s cubic-bezier(1,.5,0.5,.5)
+        pointer-events: none
+    &:hover::after, &:focus::after
+        transform: scaleX(2)
+
+.nav-link
+
+    a
+
+        text-decoration: none
+        padding: 0.5em 1em

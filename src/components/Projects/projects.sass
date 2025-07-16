@@ -1,0 +1,57 @@
+.projectCard
+    scroll-snap-align: start
+    scroll-margin: 0 10px
+    min-height: 700px
+    min-width: 400px
+    width: fit-content
+    height: fit-content
+    display: flex
+    align-items: start
+    @media all and (max-width:1200px)
+        max-width: 300px
+        align-items: start
+
+.cBody
+    top: 10%
+
+.cardImg
+    max-height: 200px
+    max-width: 100%
+    width: auto
+    height: auto
+    align-self: center
+    object-fit: cover
+    border-radius: 10px
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+
+.projectContainer
+    height: 100vh
+    overflow: scroll
+    scrollbar-width: none
+    width: 50%
+    @media all and (max-width: 400px)
+        width: 100%
+        bottom: -10%
+.workCont
+
+    max-width: 1500px
+    max-height: 1200px
+    width: auto
+    gap: 1em
+    height: 600px
+    margin: 0 auto
+    justify-content: space-between
+    scrollbar-width: none
+    flex-flow: row nowrap
+
+    @media all and (max-width:1200px)
+        overflow-x: scroll
+        width: 2000px
+        gap: 0
+    .card-title
+        font-size: 1.5em
+        font-weight: bold
+        color: #000
+    .card-text
+        font-size: 1em
+        color: #000

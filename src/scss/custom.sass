@@ -1,0 +1,137 @@
+
+@import "../../node_modules/bootstrap/scss/functions"
+@import "../components/Header/Header.sass"
+@import "../components/About/About.sass"
+@import "../components/Home/HomeView.sass"
+@import "../components/Projects/projects.sass"
+@import "../components/Fullstack/Fullstack.sass"
+@import "../components/LandD/LandD.sass"
+@import "../components/Contact/Contact.sass"
+$primary: #8a2326
+$secondary: #2d335a
+$tertiary: #5e426628
+$danger: #bd5b481f
+$success: #28a745
+$info: #17a2b8
+$warning: #ffc107
+$light: #f8f9fa
+$dark: #343a40
+$white: #fff
+$black: #000
+
+@import "../../node_modules/bootstrap/scss/variables"
+@import "../../node_modules/bootstrap/scss/variables-dark"
+@import "../../node_modules/bootstrap/scss/maps"
+@import "../../node_modules/bootstrap/scss/mixins"
+@import "../../node_modules/bootstrap/scss/root"
+
+@import "../../node_modules/bootstrap/scss/reboot"
+@import "../../node_modules/bootstrap/scss/type"
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap')
+
+$active-color: hsla(186, 21%, 26%, 1)
+$active-color-half: hsla(186, 21%, 26%, 1)
+// $bs-nav-link-color: #fff
+$form-color: hsla(210, 3%, 15%, 1)
+$font-dark: hsla(210, 3%, 15%, 1)
+$span: hsla(201, 20%, 23%, 1)
+$form-th: hsla(0, 0%, 100%, .8)
+$font-size: 400
+$font-family: "coming soon"
+$border-radius: 10px
+$border-circle: 50%
+$view-height: 100vh
+$x-margin: 0 auto
+$y-margin: auto 0
+
+.pokeCont
+    width: 100vw
+    height: 100vh
+
+.hexagon-background
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22720%22%20height%3D%22416%22%20viewBox%3D%220%200%20720%20416%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22bgGradient%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23EEE2DF%22%20/%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EED7C5%22%20/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url(%23bgGradient)%22%20/%3E%3Cg%20fill%3D%22%23C89F9C%22%20fill-opacity%3D%220.5%22%3E...%3C/g%3E%3C/svg%3E")
+    position: absolute
+    background-size: .1%
+    opacity: 0.3
+    top: 0
+    left: 0
+    width: 100vw
+    height: 200vh
+    border: 1px solid black
+    z-index: -100
+    animation: shine1 20s infinite alternate ease-in-out
+    animation-delay: 1s
+
+@keyframes shine1
+    0%
+
+        transform: scale(1) scaleX(1)
+
+    50%
+
+        transform: scale(1.5) scaleX(2)
+
+    100%
+
+        transform: scale(2) scaleX(4)
+
+.carouselContainer
+    object-fit: contain
+    width: 100px
+    a
+        color: $primary
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: $font-family
+
+.coming-soon-regular
+    font-family: "Coming Soon", cursive
+    font-weight: 400
+    font-style: normal
+*
+    scrollbar-width: none
+
+body
+    width: 100vw
+    overflow-x: hidden
+    scrollbar-width: none
+
+.mainContainer
+    scrollbar-width: none
+    scroll-snap-type: y mandatory
+    scroll-behavior: smooth
+    opacity: 1
+    width: 100vw
+    scroll-padding: .01em
+    height: 100vh
+    overflow: scroll
+    overflow-x: hidden
+    z-index: -100
+
+.itemContainer
+    display: flex
+    flex-direction: column
+    align-self: center
+    justify-content: center
+    width: fit-content
+    min-width: 1100px
+    height: auto
+    max-height: 800px
+    margin: auto
+    padding: 4em
+    z-index: 1
+    background-color: rgba(121, 120, 120, 0.164)
+    box-shadow: 0 0 10px rgba(73, 50, 50, 0.151)
+    p
+        width: 100%
+    @media all and (max-width: 576px)
+        height: 90%
+        width: 100%
+        min-width: fit-content
+        p
+            width: 100%
+.logoImg
+    width: 5%

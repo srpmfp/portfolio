@@ -1,0 +1,251 @@
+
+$secondary-50: #2d335a86
+
+$width: calc(max-content * .95)
+.hexagonPattern
+    width: 100%
+    height: 100%
+    position: absolute
+
+.img-wrapper
+    background-color: rgba(0, 0, 0, 0.0)
+    animation-name: scrollLeft
+    animation-duration: 3s
+
+.scrollContainer
+    position: relative
+    width: 100%
+    @media all and (max-width: 400px)
+        height: 50%
+        width: 50%
+
+.container
+    width: 75%
+
+.upArrow
+    transform: rotate(180deg)
+    position: absolute
+    background-image: radial-gradient(circle, rgba(228, 228, 228, 0.356), rgb(180, 180, 180))
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+    border-radius: 50%
+    top: 13%
+    left: 10%
+    z-index: 1000
+    width: 40px
+    height: 40px
+    max-width: 40px
+    max-height: 40px
+    opacity: 0
+    visibility: hidden
+    transition: opacity 0.3s ease, visibility 0.3s ease
+    cursor: pointer
+    &:hover
+        transform: scale(1.1)
+        transform: rotate(180deg)
+
+    &.visible
+
+        opacity: 1
+        visibility: visible
+    @media all and (max-width: 400px)
+
+        left: 5%
+        z-index: 999
+
+.downArrow
+
+    opacity: 0
+    transition: opacity 0.3s ease, visibility 0.3s ease
+    position: absolute
+    background-image: radial-gradient(circle, rgba(228, 228, 228, 0.356), rgb(180, 180, 180))
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+    border-radius: 50%
+    width: 40px
+    height: 40px
+    max-width: 40px
+    max-height: 40px
+    left: 10%
+    position: absolute
+    background-size: contain
+    bottom: 2%
+    font-size: 2em
+    color: #fff
+    cursor: pointer
+
+    &.visible
+        z-index: 999
+        opacity: 1
+        visibility: visible
+        &:hover
+            transform: scale(1.1)
+
+    @keyframes slide-in
+        0%
+            transform: translateY(0)
+        100%
+            transform: translateY(-10px)
+
+    &::after
+        animation: 3s linear 1s infinite alternate slide-in
+        @keyframes expand
+            0%
+                transform: scale(1)
+            100%
+                transform: scale(1.2)
+    @media all and (max-width: 400px)
+
+        left: 5%
+        z-index: 999
+
+.headshot
+    width: 100%
+    height: fit-content
+    max-width: 400px
+    object-fit: cover
+    border-radius: 50%
+    @media screen and (max-width: 576px)
+        display: none
+
+.bg-row-1
+    opacity: 1
+    background-image: linear-gradient( to bottom, #e9ecec63, #bd5b4849, #5e426642, #e9ecec67, #e9ecec65)
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+    height: 100vh
+    position: relative
+    z-index: -1
+
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        animation: fade .1s ease
+        background-position: left center
+        background-Color: rgba(180, 180, 180, 0.1)
+        background-size: 600px
+        background-repeat: no-repeat
+        clip-path: polygon(100% 16%, 100% 38%, 100% 100%, 0 77%, 0% 38%) // Invert the clip-path to cover the clipped parts
+
+        @media all and (max-width: 700px)
+
+            background-size: 1000px
+            background-position: bottom center
+
+    @keyframes fade
+        0%
+            opacity: 0
+            visibility: 0
+            transform: scale(0) scaleX(0) scaleY(0)
+        100%
+            opacity: 1
+            visibility: 1
+            tranform: scale(1) scaleX(1) scaleY(1)
+.bg-row-2
+    opacity: 1
+    background-image: linear-gradient( to bottom, #e9ecec63, #bd5b4849, #5e426642, #e9ecec67, #e9ecec65)
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+    height: 100vh
+    position: relative
+    z-index: -1
+
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        animation: fade .1s ease
+        background-position: left center
+        background-Color: rgba(180, 180, 180, 0.247)
+        background-size: 600px
+        background-repeat: no-repeat
+        clip-path: polygon(0 21%, 100% 34%, 100% 67%, 0 82%)
+
+        @media all and (max-width: 700px)
+
+            background-size: 1000px
+            background-position: bottom center
+
+    @keyframes fade
+        0%
+            opacity: 0
+            visibility: 0
+            transform: scale(0) scaleX(0) scaleY(0)
+        100%
+            opacity: 1
+            visibility: 1
+            tranform: scale(1) scaleX(1) scaleY(1)
+
+.carouselContainer
+    object-fit: contain
+    width: fit-content
+
+@keyframes fadeIn
+    0%
+        opacity: 0
+        position: relative
+        transform: translateX(-10px) scale(0.9) translateY(-10px)
+
+    50%
+        opacity: 0.5
+
+        transform: scale(0.99)
+
+    100%
+        opacity: 1
+
+        transform: translateX(0) translateY(0) scale(1)
+.skillItem
+    scale: .5
+
+.instDes
+    height: 100vh
+    z-index: 1
+    scroll-snap-type: x mandatory
+    font-family: arial
+    scroll-snap-align: start
+    scroll-margin: .3em
+    text-align: center
+    opacity: 0
+    width: 100vw
+    visibility: hidden
+    overflow-x: scroll
+    scrollbar-width: none
+    transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out
+    &.visible
+        scale: 1
+        opacity: 1
+        visibility: visible
+        align-items: center
+        justify-content: space-between
+        animation-name: fadeIn
+        animation-duration: 1000ms
+        animation-delay: 150ms
+        animation-timing-function: ease-in-out
+        animation-fill-mode: both
+        animation-direction: normal
+
+    span
+        font-size: 1em
+        font-weight: 800
+        color: #ce8e83
+    p
+        font-size: larger
+        color: rgb(230, 230, 224)
+        text-align: center
+        margin: 0 auto
+        transition: opacity 1s ease-in-out, visibility 0.5s ease-in-out, scale 1.5s ease-in-out
+
+    @media all and (max-width:400px)
+        font-size: small
+        p
+            width: 100%
+
+.section1
+    height: 100vh
+
+.exampleImage
+    width: 30vw
