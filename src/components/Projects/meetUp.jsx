@@ -1,5 +1,5 @@
 
-import { Card, ListGroup } from "react-bootstrap";
+import { Card, ListGroup, Container } from "react-bootstrap";
 import '../../css/custom.css';
 
 const MeetUp = () => {
@@ -8,7 +8,7 @@ const MeetUp = () => {
 
     return (
 
-        <Card className=" projectCard d-flex flex-column align-items-center">
+        <Card className=" projectCard h-75 d-flex flex-column align-items-center">
             <Card.Img variant="top" src="meetUp.png" className="cardImg" />
             <Card.Body>
                 <Card.Title>Meet Up</Card.Title>
@@ -17,14 +17,24 @@ const MeetUp = () => {
                     it also allows users to filter by specific locations and view events in a list format.
                 </Card.Text>
             </Card.Body>
-            <Card.Text><b>Technologies</b></Card.Text>
-            <ListGroup className="list-group-flush">
 
-                <ListGroup.Item>oAuth</ListGroup.Item>
-                <ListGroup.Item>AWS</ListGroup.Item>
-                <ListGroup.Item>Google Calendar API</ListGroup.Item>
-                <ListGroup.Item>Progressive Web Application</ListGroup.Item>
-                <ListGroup.Item>React Bootstrap</ListGroup.Item>
+            <ListGroup className="list-group-flush">
+                <Card.Text><b>Technologies</b></Card.Text>
+                <div className="d-flex  flex-row justify-content-around align-items-center">
+
+
+
+                    <Container>
+                        <ListGroup.Item>Google Calendar API</ListGroup.Item>
+                        <ListGroup.Item>oAuth</ListGroup.Item>
+                        <ListGroup.Item>AWS</ListGroup.Item>
+                    </Container>
+                    <Container>
+
+                        <ListGroup.Item>Progressive Web Application</ListGroup.Item>
+                        <ListGroup.Item>React Bootstrap</ListGroup.Item>
+                    </Container>
+                </div>
             </ListGroup>
             <Card.Body>
                 <Card.Link href="https://github.com/srpmfp/meetup">Git Hub Link</Card.Link>

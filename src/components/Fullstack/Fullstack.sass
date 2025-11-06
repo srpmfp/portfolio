@@ -116,14 +116,16 @@ $scrollSpeed: calc($scrollwidth*3.4*-1)
 
         100%
             transform: translateX($scrollSpeed)
+
 @media all and (max-width: 580px)
     @keyframes scroll-left
         0%
             transform: translateX(0)
 
         100%
-            transform: translateX(-665px)
-@media all and (max-width: 450px)
+            transform: translateX($scrollSpeed)
+
+@media all and (max-width: 400px)
     @keyframes scroll-left
         0%
             transform: translateX(0)

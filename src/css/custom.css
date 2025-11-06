@@ -33,6 +33,15 @@
   background-size: 40%;
 }
 
+.dropdown {
+  background-color: none;
+}
+@media all and (max-width: 992px) {
+  .dropdown {
+    background-color: #8a2326;
+  }
+}
+
 .navHeader {
   display: flex;
   flex-direction: row;
@@ -127,7 +136,7 @@
   position: relative;
   width: 100%;
 }
-@media all and (max-width: 400px) {
+@media all and (max-width: 450px) {
   .scrollContainer {
     height: 50%;
     width: 50%;
@@ -145,7 +154,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   top: 13%;
-  left: 10%;
+  left: 2.5%;
   z-index: 1000;
   width: 40px;
   height: 40px;
@@ -182,7 +191,7 @@
   height: 40px;
   max-width: 40px;
   max-height: 40px;
-  left: 10%;
+  left: 2.5%;
   position: absolute;
   background-size: contain;
   bottom: 2%;
@@ -258,6 +267,7 @@
   background-size: 600px;
   background-repeat: no-repeat;
   clip-path: polygon(100% 16%, 100% 38%, 100% 100%, 0 77%, 0% 38%);
+  z-index: 100;
 }
 @media all and (max-width: 700px) {
   .bg-row-1::after {
@@ -284,7 +294,7 @@
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   height: 100vh;
   position: relative;
-  z-index: -1;
+  z-index: 100;
 }
 .bg-row-2::after {
   content: "";
@@ -299,6 +309,7 @@
   background-size: 600px;
   background-repeat: no-repeat;
   clip-path: polygon(0 21%, 100% 34%, 100% 67%, 0 82%);
+  z-index: -100;
 }
 @media all and (max-width: 700px) {
   .bg-row-2::after {
@@ -345,8 +356,7 @@
 
 .instDes {
   height: 100vh;
-  z-index: 1;
-  scroll-snap-type: x mandatory;
+  z-index: 998;
   font-family: arial;
   scroll-snap-align: start;
   scroll-margin: 0.3em;
@@ -354,7 +364,6 @@
   opacity: 0;
   width: 100vw;
   visibility: hidden;
-  overflow-x: scroll;
   scrollbar-width: none;
   transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
 }
@@ -363,6 +372,10 @@
   opacity: 1;
   visibility: visible;
   align-items: center;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-margin: 0.3em;
+  scroll-snap-type: y mandatory;
   justify-content: space-between;
   animation-name: fadeIn;
   animation-duration: 1000ms;
@@ -403,22 +416,54 @@
 .projectCard {
   scroll-snap-align: start;
   scroll-margin: 0 10px;
-  min-height: 700px;
-  min-width: 400px;
-  width: fit-content;
+  min-height: 800px;
+  min-width: 500px;
+  font: 1.3em;
+  width: auto;
   height: fit-content;
   display: flex;
-  align-items: start;
+  align-items: center;
+  scroll-snap-align: center;
 }
 @media all and (max-width: 1200px) {
   .projectCard {
-    max-width: 300px;
+    max-width: 400px;
     align-items: start;
+  }
+}
+@media screen and (max-width: 375px) {
+  .projectCard {
+    min-width: 100%;
+    min-height: 250px;
+    max-height: fit-content;
   }
 }
 
 .cBody {
   top: 10%;
+}
+
+.list-group-flush {
+  background-color: rgba(121, 120, 120, 0.1);
+  width: 100%;
+  padding: 10px;
+}
+.list-group-flush .container {
+  width: fit-content;
+}
+
+.card-body {
+  margin: 0;
+  height: fit-content;
+  min-height: 250px;
+  padding: 1em;
+}
+@media screen and (max-width: 375px) {
+  .card-body {
+    min-width: 350px;
+    min-height: fit-content;
+    max-height: 200px;
+  }
 }
 
 .cardImg {
@@ -438,7 +483,7 @@
   scrollbar-width: none;
   width: 50%;
 }
-@media all and (max-width: 400px) {
+@media all and (max-width: 500px) {
   .projectContainer {
     width: 100%;
     bottom: -10%;
@@ -449,27 +494,30 @@
   max-width: 1500px;
   max-height: 1200px;
   width: auto;
-  gap: 1em;
-  height: 600px;
-  margin: 0 auto;
+  gap: 0.5em;
+  height: 700px;
+  margin: auto;
+  overflow-x: scroll;
+  scroll-nap-type: x mandatory;
   justify-content: space-between;
+  align-items: center;
   scrollbar-width: none;
   flex-flow: row nowrap;
 }
-@media all and (max-width: 1200px) {
+@media all and (max-width: 900px) {
   .workCont {
     overflow-x: scroll;
     width: 2000px;
-    gap: 0;
+    gap: 0.5em;
   }
 }
 .workCont .card-title {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: bold;
   color: #000;
 }
 .workCont .card-text {
-  font-size: 1em;
+  font-size: 1.3em;
   color: #000;
 }
 
@@ -626,11 +674,11 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-665px);
+      transform: translateX(-1020px);
     }
   }
 }
-@media all and (max-width: 450px) {
+@media all and (max-width: 400px) {
   @keyframes scroll-left {
     0% {
       transform: translateX(0);
@@ -672,6 +720,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100%;
   width: auto;
   max-width: 100%;
 }
@@ -679,12 +728,12 @@
   object-fit: cover;
   width: auto;
   height: auto;
-  max-width: 500px;
+  max-width: 1000px;
   max-height: fit-content;
 }
 @media screen and (max-width: 576px) {
   .carousel-item img {
-    max-width: 400px;
+    max-width: 700px;
   }
 }
 
@@ -696,6 +745,13 @@
   text-align: center;
 }
 
+.carousel-inner {
+  height: 100%;
+  width: auto;
+  min-height: 400px;
+  min-width: 300px;
+}
+
 .contact-form {
   max-width: 600px;
   margin: auto;
@@ -703,6 +759,7 @@
   background-color: #f8f9fa;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 :root,
@@ -1400,6 +1457,22 @@ progress {
   content: "— ";
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  position: relative;
+  padding: 0;
+}
+
 .pokeCont {
   width: 100vw;
   height: 100vh;
@@ -1408,6 +1481,7 @@ progress {
 .hexagon-background {
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22720%22%20height%3D%22416%22%20viewBox%3D%220%200%20720%20416%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22bgGradient%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23EEE2DF%22%20/%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23EED7C5%22%20/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url(%23bgGradient)%22%20/%3E%3Cg%20fill%3D%22%23C89F9C%22%20fill-opacity%3D%220.5%22%3E...%3C/g%3E%3C/svg%3E");
   position: absolute;
+  overflow-x: hidden;
   background-size: 0.1%;
   opacity: 0.3;
   top: 0;
@@ -1420,17 +1494,6 @@ progress {
   animation-delay: 1s;
 }
 
-@keyframes shine1 {
-  0% {
-    transform: scale(1) scaleX(1);
-  }
-  50% {
-    transform: scale(1.5) scaleX(2);
-  }
-  100% {
-    transform: scale(2) scaleX(4);
-  }
-}
 .carouselContainer {
   object-fit: contain;
   width: 100px;
@@ -1483,9 +1546,8 @@ body {
   width: fit-content;
   min-width: 1100px;
   height: auto;
-  max-height: 800px;
+  max-height: 1100px;
   margin: auto;
-  padding: 4em;
   z-index: 1;
   background-color: rgba(121, 120, 120, 0.164);
   box-shadow: 0 0 10px rgba(73, 50, 50, 0.151);
@@ -1495,7 +1557,7 @@ body {
 }
 @media all and (max-width: 576px) {
   .itemContainer {
-    height: 90%;
+    height: 100%;
     width: 100%;
     min-width: fit-content;
   }

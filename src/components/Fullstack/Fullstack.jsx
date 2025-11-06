@@ -4,7 +4,7 @@ import { Image } from 'react-bootstrap';
 const Fullstack = () => {
     return (
 
-        <div className="instDes itemContainer h-100 rounded d-flex flex-row p-2 justify-content-center align-items-center smw-100 my-sm-5 my-xs-5 ">
+        <div className=" itemContainer h-100 rounded d-flex flex-row p-2 justify-content-center align-items-center smw-100 my-sm-5 my-xs-5 ">
 
             <Image src='transparentSeanHeadshot.png' className="headshot d-lg-inline d-md-none d-sm-none " alt="Headshot" />
             <div className="textCont">

@@ -1,6 +1,6 @@
 import react from 'react';
 import { useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import Header from '../Header/Header';
 
 //css styling
@@ -11,12 +11,9 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router'
 
 
 //components
-import AboutView from '../About/About';
+
 import HomeView from '../Home/HomeView';
-import Apflix from '../Projects/apflix.jsx'
-import MeetUp from '../Projects/meetUp.jsx'
-import Pokedex from '../Projects/Pokedex.jsx'
-import ChatApp from '../Projects/chatApp.jsx'
+
 
 
 const MainView = () => {
@@ -28,8 +25,6 @@ const MainView = () => {
         <BrowserRouter>
 
             <Header className="position-fixed" setPage={setPage} />
-            <div className="hexagon-background hexagon-background2 hexagon-background3 hexagon-background4">
-            </div>
             <Routes>
                 <Route path="/"
                     element=

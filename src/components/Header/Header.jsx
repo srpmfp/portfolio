@@ -19,7 +19,7 @@ const Header = ({ setPage }) => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
           <Navbar.Collapse id="basic-navbar-nav" className="">
-            <Nav className="me-auto  p-2">
+            <Nav className="dropdown me-auto  p-2 ">
               <Nav.Link
                 className="nav-underline text-light"
                 onClick={() => setPage("home")}

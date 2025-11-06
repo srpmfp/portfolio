@@ -13,13 +13,13 @@ const AllWork = () => {
         <div className="workCont h-100 d-flex flex-row overflow-scroll ">
 
 
-            <Apflix md={3} className="snapScroll" />
+            <Apflix md={3} />
 
-            <Pokedex md={3} className="snapScroll" />
+            <Pokedex md={3} />
 
-            <MeetUp md={3} className="snapScroll" />
+            <MeetUp md={3} />
 
-            <ChatApp md={3} className="snapScroll" />
+            <ChatApp md={3} />
 
         </div>
     )

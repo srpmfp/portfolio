@@ -52,7 +52,7 @@ const HomeView = () => {
         for (let section of sections) {
             const sectionTop = section.getBoundingClientRect().top - containerTop + currentScrollTop;
 
-            if (sectionTop > currentScrollTop + 300) { // 100px buffer
+            if (sectionTop > currentScrollTop + 400) { // 100px buffer
                 container.scrollTo({
                     top: sectionTop,
                     behavior: 'smooth'
@@ -146,19 +146,6 @@ const HomeView = () => {
             </button>
 
 
-            {/*  Background texture animation */}
-
-
-            <div className=" hexagon-background ">
-            </div>
-            <div className="  hexagon-background2 ">
-            </div>
-            <div className="  hexagon-background3 ">
-            </div>
-
-
-            {/* End BG texture animation */}
-
 
             <Row id="fullStack" className="fullStack instDes row justify-content-end bg-row-1">
                 <div className="d-flex justify-content-center align-items-center h-100">
@@ -191,9 +178,9 @@ const HomeView = () => {
                 {/* Contact Section */}
 
             </Row>
-            <div id="contact" className="row justify-content-end bg-row-2">
-                <div className="col-md-auto p-0 md-display-6 m-auto ">
-                    <div id="powerSuite" className="container d-flex p-0 flex-column justify-content-center  m-auto instDes powerSuite ">
+            <div id="contact" className="justify-content-end bg-row-2">
+                <div className="">
+                    <div id="powerSuite" className="d-flex p-0 flex-column justify-content-center  m-auto instDes powerSuite ">
                         <Contact />
                     </div>
                 </div>

@@ -7,7 +7,7 @@ import { Card, ListGroup, Container, } from "react-bootstrap";
 const Apflix = () => {
 
     return (
-        <Card className=" projectCard d-flex flex-column align-items-center">
+        <Card className=" projectCard h-75 d-flex flex-column align-items-center">
             <Card.Img variant="top" src="/apflixImg.png" className="cardImg" />
             <Card.Body>
                 <Card.Title>Apflix</Card.Title>
@@ -17,10 +17,9 @@ const Apflix = () => {
                 </Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
+                <Card.Text style={{ 'textAlign': 'center' }}><b>Technologies</b></Card.Text>
                 <div className="d-flex  flex-row justify-content-around align-items-center">
                     <Container >
-
-                        <Card.Text style={{ 'textAlign': 'center' }}><b>Technologies</b></Card.Text>
                         <ListGroup.Item>React</ListGroup.Item>
                         <ListGroup.Item>MongoDB</ListGroup.Item>
                         <ListGroup.Item>Netlify</ListGroup.Item>

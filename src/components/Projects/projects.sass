@@ -1,18 +1,40 @@
 .projectCard
     scroll-snap-align: start
     scroll-margin: 0 10px
-    min-height: 700px
-    min-width: 400px
-    width: fit-content
+    min-height: 800px
+    min-width: 500px
+    font: 1.3em
+    width: auto
     height: fit-content
     display: flex
-    align-items: start
+    align-items: center
+    scroll-snap-align: center
     @media all and (max-width:1200px)
-        max-width: 300px
+        max-width: 400px
         align-items: start
+    @media screen and (max-width: 375px)
+        min-width: 100%
+        min-height: 250px
+        max-height: fit-content
 
 .cBody
     top: 10%
+.list-group-flush
+    background-color: rgba(121, 120, 120, 0.1)
+    width: 100%
+    padding: 10px
+    .container
+        width: fit-content
+
+.card-body
+    margin: 0
+    height: fit-content
+    min-height: 250px
+    padding: 1em
+    @media screen and (max-width: 375px)
+        min-width: 350px
+        min-height: fit-content
+        max-height: 200px
 
 .cardImg
     max-height: 200px
@@ -29,7 +51,7 @@
     overflow: scroll
     scrollbar-width: none
     width: 50%
-    @media all and (max-width: 400px)
+    @media all and (max-width: 500px)
         width: 100%
         bottom: -10%
 .workCont
@@ -37,21 +59,24 @@
     max-width: 1500px
     max-height: 1200px
     width: auto
-    gap: 1em
-    height: 600px
-    margin: 0 auto
+    gap: .5em
+    height: 700px
+    margin: auto
+    overflow-x: scroll
+    scroll-nap-type: x mandatory
     justify-content: space-between
+    align-items: center
     scrollbar-width: none
     flex-flow: row nowrap
 
-    @media all and (max-width:1200px)
+    @media all and (max-width:900px)
         overflow-x: scroll
         width: 2000px
-        gap: 0
+        gap: .5em
     .card-title
-        font-size: 1.5em
+        font-size: 1.3em
         font-weight: bold
         color: #000
     .card-text
-        font-size: 1em
+        font-size: 1.3em
         color: #000
