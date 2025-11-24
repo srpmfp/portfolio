@@ -25,7 +25,7 @@ const Header = ({ setPage }) => {
                 onClick={() => setPage("home")}
                 href="/">Home | </Nav.Link>
               <Nav.Link className=" nav-underline p-2 text-light" href="/#LaD">Learning And Development | </Nav.Link>
-              <Nav.Link className=" nav-underline p-2 text-light" href="/#work">Work | </Nav.Link>
+              <Nav.Link className=" nav-underline p-2 text-light" href="/#Work">Work | </Nav.Link>
               <Nav.Link className=" nav-underline p-2 text-light" href="/#contact">Contact |</Nav.Link>
 
             </Nav>

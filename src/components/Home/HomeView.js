@@ -161,23 +161,27 @@ const HomeView = () => {
 
 
             {/* Learning and Development Section */}
-            <Row className="instDes bg-row-2">
-                <div id="LaD"  >
+            <div className="bg-row-1">
+                <Container className=" instDes bg-row-1 itemContainer d-flex flex-column m-auto justify-content-between align-items-start">
+
                     <LandD />
-                </div>
-            </Row>
 
-
-            {/* Portfolio Section */}
-            <Row id="work" className=" justify-content-around instDes bg-row-1 ">
-
-                <Container className="itemContainer d-flex flex-column m-auto justify-content-between align-items-start ">
-                    <AllWork md={12} />
                 </Container>
+            </div>
+            {/* Portfolio Section */}
+            <div id="Work" className="bg-row-1">
+                <Container className=" instDes  itemContainer d-flex flex-column justify-content-between align-items-start ">
+                    <div className="workCont h-100 d-flex flex-row overflow-scroll ">
 
-                {/* Contact Section */}
 
-            </Row>
+                        <AllWork md={12} />
+
+
+                    </div>
+                </Container>
+            </div>
+            {/* Contact Section */}
+
             <div id="contact" className="justify-content-end bg-row-2">
                 <div className="">
                     <div id="powerSuite" className="d-flex p-0 flex-column justify-content-center  m-auto instDes powerSuite ">
