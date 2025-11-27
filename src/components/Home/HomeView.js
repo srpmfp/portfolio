@@ -141,6 +141,7 @@ const HomeView = () => {
             className="mainContainer p-0 m-0 container-fluid md-display-6 ">
 
             {/* Up Arrow Button */}
+            
             <button onClick={scrollToPreviousSection}>
                 <Image bsPrefix='upArrow' src="downArrow.png" className="upArrow" />
             </button>

@@ -10,15 +10,18 @@ const Header = ({ setPage }) => {
 
   return (
     <div className='navHeader '>
+
       <div className='bgPattern '></div>
 
       <Navbar expand="lg" className=" p-0 w-100 justify-content-center border-bottom border-dark rounded-bottom">
+
         <Image src="SPIcon2Sheet.png" alt="Sean icon" className="headerImage p-2" />
         <Container className="container-fluid ">
           <Navbar.Brand href="/" className="p-3 nav-underline text-light">Sean Ryan Peters</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
           <Navbar.Collapse id="basic-navbar-nav" className="">
+
             <Nav className="dropdown me-auto  p-2 ">
               <Nav.Link
                 className="nav-underline text-light"

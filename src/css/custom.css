@@ -6,6 +6,7 @@
 
 .headerImage {
   left: 5vw;
+  top: 2%;
   width: fit-content;
   height: 150px;
   max-width: 150px;
@@ -61,6 +62,10 @@
 }
 
 @media all and (max-width: 1000px) {
+  .socialicons {
+    position: absolute;
+    bottom: 100%;
+  }
   .headerImage {
     display: none;
     height: max-content;
@@ -120,6 +125,16 @@
 .nav-link a {
   text-decoration: none;
   padding: 0.5em 1em;
+}
+
+.socialIcon {
+  Height: 50%;
+  max-height: 100px;
+  width: auto;
+}
+.socialIcon:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
 }
 
 .hexagonPattern {

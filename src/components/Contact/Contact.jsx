@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 import '../../css/custom.css';
 import emailjs from '@emailjs/browser';
 
@@ -153,7 +154,13 @@ const Contact = () => {
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
+                <a href="https://x.com/seanpetersdev" target="_blank" rel="noreferrer">
+                    <Image src="twit.png" alt="Twitter" className="socialIcon p-2" /></a>
+
+
+                <a href="https://medium.com/@sean.r.ptrs" target="_blank" rel="noreferrer"><Image src="medium.png" alt="Medium" className="socialIcon p-2" /></a    >
             </Form>
+
         </>
     );
 };
