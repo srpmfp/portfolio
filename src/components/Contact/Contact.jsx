@@ -158,7 +158,7 @@ const Contact = () => {
                     <Image src="twit.png" alt="Twitter" className="socialIcon p-2" /></a>
 
 
-                <a href="https://medium.com/@sean.r.ptrs" target="_blank" rel="noreferrer"><Image src="medium.png" alt="Medium" className="socialIcon p-2" /></a    >
+                <a href="https://medium.com/@sean.r.ptrs" target="_blank" rel="noreferrer"><Image src="medium.png" alt="Medium" className="socialIcon p-2" /></a>
             </Form>
 
         </>

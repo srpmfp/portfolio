@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/m01nbl4gqcpg/public_html/
+    - /bin/cp -R * $DEPLOYPATH
+    - cd $DEPLOYPATH
+    - npm install --production
+    - npm run build
+    - /bin/cp -R build/* ./
